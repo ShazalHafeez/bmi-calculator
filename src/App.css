@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+/* Style the toggle switch container */
+body {
+  font-family: "Satoshi", Arial, sans-serif;
+  background: linear-gradient(to right, #082f49, #4a044e);
 }
 
-.App-logo {
-  height: 40vmin;
+.btn-secondary {
+  background-color: #2b1f36;
+  height: 50px;
+}
+
+.grad-button {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 100%
+  );
+}
+
+.grad-button:hover {
+  background: rgb(55, 55, 231, 46%);
+  border: none;
+}
+
+.form-container {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+  width: 50vh;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-radius: 30px;
+  border: 1px solid #444;
+  padding: 12px 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.6);
+  outline: none;
+}
+
+/* Label Animation */
+.form-label {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  background: transparent;
+  padding: 0 5px;
+  color: #aaa;
+  transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  top: -20px;
+  left: 15px;
+  color: #aaa;
+  font-size: 0.85rem;
 }
