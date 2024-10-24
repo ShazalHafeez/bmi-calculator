@@ -48,7 +48,7 @@ function App() {
     localStorage.setItem("bmiResult", resultText);
   };
 
-  // Load the stored BMI result on page load
+  // Load the stored BMI result on page
   useEffect(() => {
     const storedResult = localStorage.getItem("bmiResult");
     if (storedResult) {
